@@ -1,0 +1,27 @@
+---
+permalink: /llms.txt
+layout: null
+sitemap: false
+---
+# 적토행정사사무소
+
+> 경기도 화성시 소재, 기업 인허가·기업인증·부동산 개발 인허가를 전문으로 하는 행정사사무소.
+> 대표 김경록(행정사, 전 국방부 건설장교 21년), 공인중개사 김은진과 함께 행정사+공인중개사
+> 통합 모델로 운영.
+
+## 핵심 서비스
+
+- [공장·사업장 인허가]({{ site.url }}/services/01-factory/): 공장설립 승인·등록, 제조업 인허가, 사업장 이전
+- [토지·개발 인허가]({{ site.url }}/services/02-land/): 개발행위허가, 토지형질변경, 농지·산지전용
+- [기업 가치 상승(기업인증)]({{ site.url }}/services/03-certification/): 벤처기업, 이노비즈, 메인비즈, 기업부설연구소
+- [정부정책 및 기업지원 활용]({{ site.url }}/services/04-government-support/): 정부조달 등록, 직접생산확인, 사회적기업
+- [기업 행정 리스크 대응]({{ site.url }}/services/05-risk/): 인허가 사전검토, 행정심판, 행정처분 대응
+
+## 회사 정보
+
+- [회사소개]({{ site.url }}/about/)
+- [대표인사말]({{ site.url }}/prologue/)
+- [이력]({{ site.url }}/history/)
+- [자료실]({{ site.url }}/resources/)
+- [자주 묻는 질문]({{ site.url }}/faq/)
+- [상담문의]({{ site.url }}/contact/): 전화 {{ site.company.phone }}

@@ -1,0 +1,72 @@
+---
+layout: default
+title: 자료실
+permalink: /resources/
+docs:
+  - category: 상위 계획
+    type: PDF
+    name: 국토종합계획 2021-2040
+    desc: 대한민국 국토의 장기발전 방향을 제시하는 최상위 국토계획
+  - category: 상위 계획
+    type: PDF
+    name: 도시기본계획 안내
+    desc: 지자체별 장기발전방향을 제시하는 도시계획 자료
+  - category: 일반 자료
+    type: 문서
+    name: 개발행위허가 신청 안내
+    desc: 토지 개발행위 허가 신청 절차 및 구비서류 안내
+  - category: 일반 자료
+    type: 문서
+    name: 공장설립등록 절차 안내
+    desc: 공장 설립 등록을 위한 단계별 절차 및 주의사항
+  - category: 일반 자료
+    type: 문서
+    name: 농지전용허가 신청 가이드
+    desc: 농지전용허가 및 신고 절차에 대한 종합 안내
+  - category: 업무 편람
+    type: 편람
+    name: 행정사 업무 처리 편람
+    desc: 행정사 업무 수행을 위한 실무 참고 자료
+  - category: 업무 편람
+    type: 체크리스트
+    name: 부동산 인허가 체크리스트
+    desc: 부동산 관련 주요 인허가 항목 점검표
+  - category: 업무 편람
+    type: 매뉴얼
+    name: 기업 인허가 업무 매뉴얼
+    desc: 기업 설립 및 운영 관련 인허가 업무 처리 지침
+---
+<section class="hero">
+  <div class="wrap">
+    <h1>행정 업무에 필요한<br>유용한 정보와 자료를 제공합니다</h1>
+    <p>주요 행정 자료, 업무 참고 자료, 안내문 등을 정리하여 제공합니다.</p>
+  </div>
+</section>
+
+<div class="notice-box wrap" style="margin-top:24px;">
+  기존 사이트에 있던 자료 목록입니다. 실제 파일(PDF)은 새 사이트로 옮길 때 <code>assets/downloads/</code>
+  폴더에 다시 업로드해야 다운로드 버튼이 동작합니다. — 확인 필요
+</div>
+
+<section class="page-section">
+  <div class="wrap">
+    <div class="card-grid">
+      {% for d in page.docs %}
+      <div class="card">
+        <span class="card-tag">{{ d.category }} · {{ d.type }}</span>
+        <h3>{{ d.name }}</h3>
+        <p>{{ d.desc }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="page-section soft" style="text-align:center;">
+  <div class="wrap">
+    <h2 class="section-title">더 자세한 해설과 사례는 블로그에서 확인하세요</h2>
+    <p class="section-lead">실제 인허가 진행 사례, 법령 해석, 절차 안내 등 실무에 필요한 다양한 정보를
+    네이버 블로그에서 제공하고 있습니다.</p>
+    <a class="btn-primary" href="{{ site.company.naver_blog }}" target="_blank" rel="noopener">네이버 블로그 바로가기</a>
+  </div>
+</section>

@@ -1,0 +1,54 @@
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-col">
+      <h4>적토행정사사무소</h4>
+      <p class="footer-msg">적토(赤兔) — 천리를 달려도 지치지 않고 장애물을 뛰어넘었던 명마처럼,<br>
+      기업이 목적지에 도달할 때까지 행정의 길을 함께 찾겠습니다.</p>
+    </div>
+    <div class="footer-col">
+      <h4>전문서비스</h4>
+      <ul>
+        {% for s in site.services %}
+        <li><a href="{{ s.url | relative_url }}">{{ s.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>바로가기</h4>
+      <ul>
+        <li><a href="{{ '/cases/' | relative_url }}">성공사례</a></li>
+        <li><a href="{{ '/faq/' | relative_url }}">자주 묻는 질문</a></li>
+        <li><a href="{{ '/insights/' | relative_url }}">인사이트</a></li>
+        <li><a href="{{ site.company.naver_blog }}" target="_blank" rel="noopener">네이버 블로그</a></li>
+        <li><a href="{{ site.company.youtube }}" target="_blank" rel="noopener">유튜브 채널</a></li>
+        <li><a href="{{ site.company.realestate }}" target="_blank" rel="noopener">적토 부동산</a></li>
+        <li><a href="{{ '/privacy/' | relative_url }}">개인정보처리방침</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>오시는 길</h4>
+      <address>
+        {{ site.company.address }}<br>
+        전화 <a href="{{ site.company.phone_tel }}">{{ site.company.phone }}</a><br>
+        이메일 <a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a><br>
+        {{ site.company.hours }}
+      </address>
+    </div>
+  </div>
+  <div class="wrap legal-bar">
+    <p>
+      {{ site.company.name }} · 대표 {{ site.company.ceo }} · 행정사 자격증 {{ site.company.license_no }} ·
+      사업자등록번호 {{ site.company.biz_no }}
+    </p>
+    <p class="disclaimer">
+      본 사이트의 정보는 일반적인 안내를 목적으로 하며, 구체적인 사안은 관련 법령 및 소관 행정기관 확인을 거쳐야 합니다.
+      본 사이트의 콘텐츠(문서·이미지 포함)는 저작권법에 따라 보호되며, 사전 동의 없는 무단 전재·복제·배포를 금합니다.
+      © {{ site.time | date: '%Y' }} {{ site.company.name }}. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+<div class="mobile-sticky-bar">
+  <a href="{{ site.company.phone_tel }}" class="sticky-btn sticky-call">📞 전화상담</a>
+  <a href="{{ '/contact/' | relative_url }}" class="sticky-btn sticky-contact">문의하기</a>
+</div>

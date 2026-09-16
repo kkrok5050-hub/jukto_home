@@ -1,0 +1,83 @@
+---
+layout: default
+---
+<article class="service-detail wrap">
+  <p class="service-eyebrow">전문서비스 {{ page.order }}</p>
+  <h1>{{ page.title }}</h1>
+  <p class="service-summary">{{ page.summary }}</p>
+
+  {% if page.definition %}
+  <section class="s-block">
+    <h2>이런 업무입니다</h2>
+    <p>{{ page.definition }}</p>
+  </section>
+  {% endif %}
+
+  {% if page.situations %}
+  <section class="s-block">
+    <h2>이런 경우에 필요합니다</h2>
+    <ul class="check-list">
+      {% for item in page.situations %}<li>{{ item }}</li>{% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if page.tasks %}
+  <section class="s-block">
+    <h2>주요 업무 범위</h2>
+    <ul class="check-list">
+      {% for item in page.tasks %}<li>{{ item }}</li>{% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if page.process %}
+  <section class="s-block">
+    <h2>진행 절차</h2>
+    <ol class="process-steps">
+      {% for step in page.process %}
+      <li><span class="step-no">{{ step.step }}</span><strong>{{ step.name }}</strong><p>{{ step.desc }}</p></li>
+      {% endfor %}
+    </ol>
+  </section>
+  {% endif %}
+
+  {% if page.checklist %}
+  <section class="s-block">
+    <h2>준비 서류 체크리스트</h2>
+    <ul class="check-list">
+      {% for item in page.checklist %}<li>{{ item }}</li>{% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if page.laws %}
+  <section class="s-block">
+    <h2>근거 법령</h2>
+    <ul class="law-list">
+      {% for law in page.laws %}
+      <li><strong>{{ law.name }}</strong>{% if law.note %} <span class="law-note">({{ law.note }})</span>{% endif %}</li>
+      {% endfor %}
+    </ul>
+    <p class="law-caveat">※ 위 법령 정보는 참고용이며, 최신 개정 여부는 국가법령정보센터(law.go.kr)에서 확인이 필요합니다.</p>
+  </section>
+  {% endif %}
+
+  {{ content }}
+
+  {% if page.faqs %}
+  <section class="s-block">
+    <h2>자주 묻는 질문</h2>
+    <div class="faq-list">
+      {% for f in page.faqs %}
+      <details><summary>{{ f.q }}</summary><p>{{ f.a }}</p></details>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <section class="s-cta">
+    <p>{{ page.title }} 관련하여 지금 상황부터 확인해보세요.</p>
+    <a class="btn-primary" href="{{ '/contact/' | relative_url }}">상담 문의하기</a>
+  </section>
+</article>

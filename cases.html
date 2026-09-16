@@ -1,0 +1,27 @@
+---
+layout: default
+title: 성공사례
+permalink: /cases/
+---
+<section class="hero">
+  <div class="wrap">
+    <h1>성공사례</h1>
+    <p>실제로 처리한 인허가·인증·행정절차 사례를 모았습니다.</p>
+  </div>
+</section>
+
+<section class="page-section">
+  <div class="wrap">
+    {% assign sorted_cases = site.cases | sort: 'date' | reverse %}
+    <ul class="case-list">
+      {% for c in sorted_cases %}
+      <li>
+        <a href="{{ c.url | relative_url }}">
+          <span class="case-title">{{ c.title }}</span>
+          <span class="case-date">{{ c.date | date: "%Y-%m-%d" }}</span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

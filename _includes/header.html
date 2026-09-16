@@ -1,0 +1,26 @@
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <span class="brand-ko">적토행정사사무소</span>
+    </a>
+    <nav class="main-nav">
+      <a href="{{ '/' | relative_url }}">홈</a>
+      <a href="{{ '/prologue/' | relative_url }}">대표인사말</a>
+      <a href="{{ '/about/' | relative_url }}">회사소개</a>
+      <div class="nav-dropdown">
+        <a href="{{ '/expertise/' | relative_url }}">전문서비스 ▾</a>
+        <div class="dropdown-panel">
+          {% for s in site.services %}
+          <a href="{{ s.url | relative_url }}">{{ s.title }}</a>
+          {% endfor %}
+        </div>
+      </div>
+      <a href="{{ '/history/' | relative_url }}">이력</a>
+      <a href="{{ '/cases/' | relative_url }}">성공사례</a>
+      <a href="{{ '/resources/' | relative_url }}">자료실</a>
+      <a href="{{ '/insights/' | relative_url }}">인사이트</a>
+      <a href="{{ '/faq/' | relative_url }}">FAQ</a>
+      <a href="{{ '/contact/' | relative_url }}" class="nav-cta">상담문의</a>
+    </nav>
+  </div>
+</header>

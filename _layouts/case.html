@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<article class="case-detail wrap">
+  <p class="service-eyebrow">성공사례</p>
+  <h1>{{ page.title }}</h1>
+  <p class="case-meta">{{ page.date | date: "%Y년 %m월 %d일" }}{% if page.service %} · {{ page.service }}{% endif %}</p>
+
+  <div class="case-body">
+    {{ content }}
+  </div>
+
+  <section class="s-cta">
+    <p>비슷한 상황이신가요? 지금 상황부터 확인해보세요.</p>
+    <a class="btn-primary" href="{{ '/contact/' | relative_url }}">상담 문의하기</a>
+  </section>
+
+  <p style="margin-top:24px;"><a href="{{ '/cases/' | relative_url }}">← 성공사례 목록으로</a></p>
+</article>
